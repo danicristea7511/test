@@ -1,9 +1,9 @@
- <script type="text/javascript">
+c <script type="text/javascript">
       var apiKey,
         sessionId,
         logonParams = {
-          username: 'user@geotab.com',
-          password: '<password>'
+          username: 'daniela.cretu@softvision.ro',
+          password: 'Passw0rd2019'
       };
 
 
