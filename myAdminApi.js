@@ -1,4 +1,4 @@
-c <script type="text/javascript">
+<script type="text/plain" src="https://github.com/danicristea7511/test/blob/master/myAdminApi.js">
       var apiKey,
         sessionId,
         logonParams = {
