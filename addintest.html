@@ -10,7 +10,7 @@
     });
 });
         geotab.addin.integrationExample = function(api, state) {
-            var center = document.getElementById("center"),
+             var center = document.getElementById("center"),
                 listCreator = function(entities) {
                     var listElement = document.createElement("UL");
                     listElement.appendChild(entities.reduce(function(frag, entity) {
@@ -47,6 +47,7 @@
 
             return {
                 initialize: (api, state, callback) {
+                    console.log("initialize");
                     document.getElementById("vehiclesButton")
                         .addEventListener("click", function() {
                             state.gotoPage("devices");
@@ -54,6 +55,7 @@
                     callback();
                 },
                 focus: function(api, state) {
+                    console.log("focus");
                     refreshPage();
                 },
                 blur: function(api, state) {
