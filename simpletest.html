@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Integration Example</title>
+ <script type=text/javascript src="https://geotab.github.io/sdk/software/api/codebase/api.js"></script>
+    <script>
+        
+        geotab.addin.integrationExample = function(api, state) {
+            var api = GeotabApi(function (authenticateCallback) {
+    authenticateCallback('my327.geotab.com', 'PTCTest', 'andrei.robu@softvision.ro', 'Softvision12', function(err) {
+        console.error(err);
+    });
+});
+             
+
+            return {
+                initialize: (api, state, callback) {
+                    console.log("initialize");
+                   
+                    callback();
+                },
+                focus: function(api, state) {
+                    console.log("focus");
+                    
+                },
+                blur: function(api, state) {
+                    console.log("blur");
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="center">
+        <button id="vehiclesButton">Go to vehicles page</button>
+    </div>
+</body>
+</html>
