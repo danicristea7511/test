@@ -2,8 +2,13 @@
 <html>
 <head>
     <title>Custom Integration Example</title>
- 
+ <script type=text/javascript src="https://geotab.github.io/sdk/software/api/codebase/api.js"></script>
     <script>
+        var api = GeotabApi(function (authenticateCallback) {
+    authenticateCallback('my327.geotab.com', 'PTCTest', 'andrei.robu@softvision.ro', 'Softvision12', function(err) {
+        console.error(err);
+    });
+});
         geotab.addin.integrationExample = function(api, state) {
             var center = document.getElementById("center"),
                 listCreator = function(entities) {
