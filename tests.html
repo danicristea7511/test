@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+     <script type="text/javascript">
+          console.log("test");
+           geotab.addin.integrationExample = function(api, state) {
+         return {
+                initialize: (api, state, callback) {
+                    console.log("initialize");
+                   
+                    callback();
+                },
+                focus: function(api, state) {
+                    console.log("focus");
+                    
+                },
+                blur: function(api, state) {
+                    console.log("blur");
+                }
+            }
+        };
+    </script>
+    <div id="center">
+        <button id="vehiclesButton">Go to vehicles page</button>
+    </div>
+</body>
+</html>
